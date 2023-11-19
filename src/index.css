@@ -1,0 +1,47 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-add-todo {
+  text-align: left;
+  padding: 20px;
+}
+
+.form-add-todo label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.custom-box {
+  border: 2px solid #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between; /* Elemente rechts und links ausrichten */
+}
+
+.icons {
+  display: flex;
+}
+
+.icons i {
+  margin-left: 10px; /* Abstand zwischen den Icons */
+}

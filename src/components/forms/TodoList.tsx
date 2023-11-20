@@ -1,11 +1,13 @@
-import TodoItem from "../TodoItem";
+import TodoItem from '../TodoItem';
 
-import { type FC } from "react";
+import { type FC } from 'react';
 
 type TodoListProps = {
   todo: {
     name: string;
     description: string;
+    priority: string;
+    id: number;
   }[];
 };
 

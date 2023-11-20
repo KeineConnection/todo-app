@@ -1,14 +1,17 @@
-import { type FormEvent, type FC, useState } from "react";
+import { type FormEvent, type FC, useState } from 'react';
 
-import { type Todo } from "../../App";
+import { type Todo } from '../../App';
 
 type NewTodoProps = {
   onAddTodo: (todo: Todo) => void;
 };
 
 const NewTodo: FC<NewTodoProps> = ({ onAddTodo }) => {
-  const [name, setName] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  const [name, setName] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
+  const [priority, setPriority] = useState<string>('');
+
+  const id = Math.random();
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -16,6 +19,8 @@ const NewTodo: FC<NewTodoProps> = ({ onAddTodo }) => {
     const newTodo = {
       name,
       description,
+      priority,
+      id,
     };
 
     onAddTodo(newTodo);
@@ -43,10 +48,10 @@ const NewTodo: FC<NewTodoProps> = ({ onAddTodo }) => {
         />
 
         <label>Priority</label>
-        <select>
-          <option value="hoch">Hoch</option>
-          <option value="mittel">Mittel</option>
-          <option value="niedrig">Niedrig</option>
+        <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+          <option value="Hoch">Hoch</option>
+          <option value="Mittel">Mittel</option>
+          <option value="Niedrig">Niedrig</option>
         </select>
 
         <br />

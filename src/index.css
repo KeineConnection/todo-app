@@ -4,7 +4,7 @@ html {
   margin: 0;
   background-color: black;
   color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
@@ -44,4 +44,12 @@ html {
 
 .icons i {
   margin-left: 10px; /* Abstand zwischen den Icons */
+}
+
+.todo-container {
+  border: 2px solid white;
+  border-radius: 10px; /* Ändere die Zahl, um den Grad der Abrundung anzupassen */
+  padding: 10px; /* Optional: Fügt etwas Abstand zwischen dem Rand und dem Inhalt hinzu */
+  max-width: 80%; /* Begrenzt die maximale Breite des Containers */
+  overflow: hidden; /* Verhindert, dass der Inhalt über den Container hinausragt */
 }

@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import NewTodo from "./components/forms/NewTodo";
-import TodoList from "./components/forms/TodoList";
+import NewTodo from './components/forms/NewTodo';
+import TodoList from './components/forms/TodoList';
 
 export type Todo = {
   name: string;
   description: string;
+  priority: string;
+  id: number;
 };
 
 const todos = [
   {
-    name: "Learn React",
-    description: "It can take a while",
+    name: 'Make an todo app',
+    description: 'Wir wollen eine Todo App in React bauen',
+    priority: 'Hoch',
+    id: Math.random(),
   },
 ];
 

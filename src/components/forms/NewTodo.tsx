@@ -11,7 +11,7 @@ const NewTodo: FC<NewTodoProps> = ({ onAddTodo }) => {
   const [description, setDescription] = useState<string>('');
   const [priority, setPriority] = useState<string>('');
 
-  const id = Math.random();
+  const id: number = Math.random();
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();

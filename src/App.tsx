@@ -26,6 +26,10 @@ const App = () => {
     sT((todos) => [...todos, todo]);
   }
 
+  function handleDeleteTodo(id: number) {
+    sT((items) => items.filter((item) => item.id !== id));
+  }
+
   return (
     <div>
       <h2>A todo app with React & TypeScript</h2>
@@ -34,7 +38,7 @@ const App = () => {
       <NewTodo onAddTodo={handleAddTodo} />
       <hr />
 
-      <TodoList todo={t} />
+      <TodoList todo={t} onDeleteTodo={handleDeleteTodo} />
     </div>
   );
 };

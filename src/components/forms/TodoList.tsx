@@ -9,12 +9,13 @@ type TodoListProps = {
     priority: string;
     id: number;
   }[];
+  onDeleteTodo: (id: number) => void;
 };
 
-const TodoList: FC<TodoListProps> = ({ todo }) => {
+const TodoList: FC<TodoListProps> = ({ todo, onDeleteTodo }) => {
   return (
     <div>
-      <TodoItem todo={todo} />
+      <TodoItem todo={todo} onDeleteTodo={onDeleteTodo} />
     </div>
   );
 };

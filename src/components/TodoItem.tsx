@@ -7,11 +7,14 @@ type TodoItemProps = {
     priority: string;
     id: number;
   }[];
+  onDeleteTodo: (id: number) => void;
 };
 
-const TodoItem: FC<TodoItemProps> = ({ todo }) => {
+const TodoItem: FC<TodoItemProps> = ({ todo, onDeleteTodo }) => {
   function handleDeleteTodo(id: number) {
-    alert('Geht das' + id);
+    console.log('Das Todo mit der ID: ' + id + ' wird gelöscht!');
+
+    onDeleteTodo(id);
   }
 
   return (

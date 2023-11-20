@@ -21,7 +21,7 @@ const TodoItem: FC<TodoItemProps> = ({ todo, onDeleteTodo }) => {
     <>
       <ul>
         {todo.map((todo) => (
-          <div className="todo-container">
+          <div className="todo-container" key={todo.id}>
             <span onClick={() => handleDeleteTodo(todo.id)}>
               X (Klicke hier zum löschen)
             </span>

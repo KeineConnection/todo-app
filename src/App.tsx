@@ -30,9 +30,16 @@ const App = () => {
     sT((items) => items.filter((item) => item.id !== id));
   }
 
+  function handleDeleteAllTodos() {
+    sT([]);
+  }
+
   return (
     <div>
       <h2>A todo app with React & TypeScript</h2>
+
+      <p onClick={handleDeleteAllTodos}>❌ - Delete all todo´s</p>
+
       <hr />
 
       <NewTodo onAddTodo={handleAddTodo} />
